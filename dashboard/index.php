@@ -14,7 +14,7 @@ if (isset($_GET['search'])) {
         } else {
             $stmt->bind_param('ss', $last_name, $short_description);
             $last_name = '%' . $_GET['last_name'] . '%';
-            $course_no = '%' . $_GET['short_description'] . '%';
+            $short_description = '%' . $_GET['short_description'] . '%';
             $stmt->execute();
             $stmt->bind_result($uniqname, $first_name, $last_name, $priority, $full_description, $short_description, $date_entered);
         }
@@ -134,7 +134,7 @@ if (isset($_GET['search'])) {
                                     <tr>
                                         <td><?php echo $uniqname; ?></td>
                                         <td><?php echo $first_name . " " . $last_name; ?></td>
-                                        <td><?php echo $short_description; ?></td>
+                                        <td class="scrollable"><?php echo $short_description; ?></td>
                                         <td><?php echo $priority; ?></td>
                                         <td class="scrollable"><div><?php echo $full_description; ?></div></td>
                                         <td><?php echo date("n-j-Y g:iA", strtotime($date_entered)); ?></td>

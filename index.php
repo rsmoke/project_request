@@ -134,8 +134,8 @@ _SQL;
                         unset($_POST['submit']);
                     } else {
                         ?>
-                        <h3>Please fill out and submit this form for website or stand alone project requests</h3>
-                        <h4 class='text-primary'>Please include existing webpages or other resources associates with this request in the <em>Detailed Description</em> box below.</h4>
+                        <h3>Fill out and submit this form for website or stand alone project requests</h3>
+                        <h4 class='text-primary'>Include existing webpages or other resources associated with this request in the <em>Detailed Description</em> box below.</h4>
                         <small>If you would like to be contacted please specify that in your message.</small>
                         <h5>Your Uniqname: <?php echo $login_name ?></h5>
                         <?php $username = ldapGleaner($login_name);?>
@@ -150,13 +150,14 @@ _SQL;
                                 <label for="email">Email:</label><input required type="email" class="form-control" name="email" value="<?php echo $login_name ?>@umich.edu">
                             </div>
                             <div class="form-group">
-                                <label for="short_description">Short Description:</label><input required type="text" class="form-control" name="short_description">
+                                <label for="short_description">Short Description:</label><input required type="text" class="form-control" id="short_description" name="short_description">
+                                <span id="statusArea"></span>
                             </div>
-				
+
                                 <div class="form-group">
                                     <label for="full_description">Detailed Description:</label><textarea rows="5" class="form-control" name="full_description" cols="30"></textarea>
                                 </div>
-                                
+
                                <div class="form-group">
                                 <label for="priority">Priority:</label>
                                 <select required class="form-control" name="priority">
