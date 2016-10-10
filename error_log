@@ -1,0 +1,2 @@
+[10-Oct-2016 12:04:16 UTC] PHP Warning:  mysqli::mysqli(): (42000/1044): Access denied for user 'csgsmoke_sUser'@'localhost' to database 'csgsmoke_ProjectRequest' in /home/csgsmoke/Support/configProjectRequest.php on line 10
+[10-Oct-2016 12:07:20 UTC] PHP Warning:  mysqli::mysqli(): (42000/1044): Access denied for user 'csgsmoke_sUser'@'localhost' to database 'csgsmoke_ProjectRequest' in /home/csgsmoke/Support/configProjectRequest.php on line 10
